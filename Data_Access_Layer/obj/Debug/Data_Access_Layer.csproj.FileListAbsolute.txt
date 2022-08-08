@@ -14,3 +14,19 @@ D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\bin\Debug\Ne
 D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.CopyComplete
 D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\obj\Debug\Data_Access_Layer.dll
 D:\.net practice\Education Platform Backend Logic\Data_Access_Layer\obj\Debug\Data_Access_Layer.pdb
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\Data_Access_Layer.dll.config
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\Data_Access_Layer.dll
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\Data_Access_Layer.pdb
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\AutoMapper.dll
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\EntityFramework.dll
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\Newtonsoft.Json.dll
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\AutoMapper.xml
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\EntityFramework.xml
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\bin\Debug\Newtonsoft.Json.xml
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.AssemblyReference.cache
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.CoreCompileInputs.cache
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\obj\Debug\Data_Access_Layer.csproj.CopyComplete
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\obj\Debug\Data_Access_Layer.dll
+D:\ASP.NET\EducationPlatform_API_FInal_Mentor\Data_Access_Layer\obj\Debug\Data_Access_Layer.pdb

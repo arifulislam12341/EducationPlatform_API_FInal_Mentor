@@ -18,5 +18,10 @@ namespace Data_Access_Layer
             
             return new AdminRepo(db);
         }
+        public static IRepo<Mentor, int> GetMentorDataAccess()
+        {
+
+            return new MentorRepo(db);
+        }
     }
 }
