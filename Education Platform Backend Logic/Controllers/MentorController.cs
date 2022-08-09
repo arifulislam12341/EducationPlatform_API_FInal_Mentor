@@ -104,7 +104,7 @@ namespace Education_Platform_Backend_Logic.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, data);
 
         }
-        [Route("api/studentinfo/{id}")]
+        [Route("api/assignmentinfo/{id}")]
         [HttpGet]
         public HttpResponseMessage GetAssignmentonly(int id)
         {

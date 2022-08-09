@@ -123,12 +123,12 @@ namespace Business_Logic_Layer.Services
         //Assignment Entities
 
 
-        public static bool StudentCreate(StudentModel obj)
+        public static bool AssignmentCreate(AssignmentModel obj)
         {
-            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<StudentModel, Student>())).Map<Student>(obj);
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<AssignmentModel, Assignment>())).Map<Assignment>(obj);
             try
             {
-                DataAccess.GetStudentDataAccess().Create(data);
+                DataAccess.GetAssignmentDataAccess().Create(data);
                 return true;
             }
             catch
@@ -136,7 +136,37 @@ namespace Business_Logic_Layer.Services
                 return false;
             }
         }
+        public static AssignmentModel GetAssignmentonly(int id)
+        {
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Assignment, AssignmentModel>())).Map<AssignmentModel>(DataAccess.GetAssignmentDataAccess().GetId(id));
+            return data;
 
+        }
+        public static bool AssignmentUpdate(AssignmentModel obj)
+        {
+            var data = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<AssignmentModel, Assignment>())).Map<Assignment>(obj);
+            try
+            {
+                DataAccess.GetAssignmentDataAccess().Update(data);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool AssignmentDelete(int id)
+        {
+            try
+            {
+                DataAccess.GetAssignmentDataAccess().Delete(id);
+                return true;
+            }
+            catch
+            {
 
+                return false;
+            }
+        }
     }
 }

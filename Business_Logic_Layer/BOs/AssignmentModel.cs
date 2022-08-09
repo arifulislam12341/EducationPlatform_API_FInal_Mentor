@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Business_Logic_Layer.BOs
 {
-    internal class AssignmentModel
+    public class AssignmentModel
     {
+        public int Id { get; set; }
+        public string Question { get; set; }
+        public string Date { get; set; }
+        public Nullable<int> MentorId { get; set; }
+        public Nullable<int> CourseId { get; set; }
     }
 }

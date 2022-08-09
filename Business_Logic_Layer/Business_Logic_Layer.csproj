@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BOs\AdminModel.cs" />
+    <Compile Include="BOs\AssignmentModel.cs" />
     <Compile Include="BOs\MentorModel.cs" />
     <Compile Include="BOs\StudentModel.cs" />
     <Compile Include="Class1.cs" />
