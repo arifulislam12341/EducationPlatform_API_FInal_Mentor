@@ -17,12 +17,18 @@ namespace Data_Access_Layer.Repos
         }
         public bool Create(Mentor obj)
         {
-            throw new NotImplementedException();
+            db.Mentors.Add(obj);
+            db.SaveChanges();
+            return true;
         }
 
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            
+            var mentor = db.Mentors.FirstOrDefault(i => i.Id == id);
+            db.Mentors.Remove(mentor);
+            db.SaveChanges();
+            return true;
         }
 
         public List<Mentor> Get()
@@ -32,12 +38,17 @@ namespace Data_Access_Layer.Repos
 
         public Mentor GetId(int id)
         {
-            throw new NotImplementedException();
+           return db.Mentors.FirstOrDefault(i=>i.Id==id);
         }
 
         public bool Update(Mentor obj)
         {
-            throw new NotImplementedException();
+            var updatementor = db.Mentors.FirstOrDefault(i => i.Id == obj.Id);
+            db.Entry(updatementor).CurrentValues.SetValues(obj);
+            db.SaveChanges();
+            return true;
+
         }
+  
     }
 }
