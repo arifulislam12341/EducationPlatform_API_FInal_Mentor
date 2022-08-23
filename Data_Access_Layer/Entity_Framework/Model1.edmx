@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Education_Platform_Final_TermModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Education_Platform_Final_TermModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admins">
           <Key>
             <PropertyRef Name="Id" />
@@ -116,6 +116,16 @@
           <Property Name="Gender" Type="varchar(max)" />
           <Property Name="Institution" Type="varchar(max)" />
           <Property Name="IsValid" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="MentorTokens">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MentorId" Type="int" />
+          <Property Name="Createdat" Type="varchar(max)" />
+          <Property Name="Expiredat" Type="varchar(max)" />
+          <Property Name="Token" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Notices">
           <Key>
@@ -556,6 +566,7 @@
           <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Institutions" EntityType="Self.Institutions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mentors" EntityType="Self.Mentors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MentorTokens" EntityType="Self.MentorTokens" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Notices" EntityType="Self.Notices" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PasswordChangeRequests" EntityType="Self.PasswordChangeRequests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ratings" EntityType="Self.Ratings" Schema="dbo" store:Type="Tables" />
@@ -677,8 +688,7 @@
             <End Role="ValidStudents" EntitySet="ValidStudents" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Education_Platform_Final_TermModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1409,7 +1419,18 @@
             <End Role="Students" EntitySet="Students" />
             <End Role="ValidStudents" EntitySet="ValidStudents" />
           </AssociationSet>
+          <EntitySet Name="MentorTokens" EntityType="Education_Platform_Final_TermModel.MentorToken" />
         </EntityContainer>
+        <EntityType Name="MentorToken">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MentorId" Type="Int32" />
+          <Property Name="Createdat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Expiredat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1635,6 +1656,17 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="StudentId" ColumnName="StudentId" />
                 <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MentorTokens">
+            <EntityTypeMapping TypeName="Education_Platform_Final_TermModel.MentorToken">
+              <MappingFragment StoreEntitySet="MentorTokens">
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="Expiredat" ColumnName="Expiredat" />
+                <ScalarProperty Name="Createdat" ColumnName="Createdat" />
+                <ScalarProperty Name="MentorId" ColumnName="MentorId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
